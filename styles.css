@@ -184,12 +184,14 @@ h2 {
 .check-list li::before,
 .service-card li::before,
 .price-card li::before {
-  content: "\\2713";
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
   position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--gold);
-  font-weight: 800;
+  left: 0.2rem;
+  top: 0.72rem;
+  background: var(--gold);
 }
 
 .hero-actions {
@@ -364,11 +366,15 @@ fieldset {
   margin-top: 2.5rem;
 }
 
+.service-grid,
+.pricing-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+}
+
 .service-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 1rem;
+  display: grid;
+  gap: 0.9rem;
 }
 
 .service-head small {
@@ -409,6 +415,11 @@ fieldset {
 
 .price-card {
   position: relative;
+}
+
+.service-card,
+.price-card {
+  height: 100%;
 }
 
 .price {
@@ -536,6 +547,11 @@ fieldset {
     grid-template-columns: 1fr;
   }
 
+  .service-grid,
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
   .site-nav {
     position: absolute;
     top: 78px;
@@ -580,10 +596,6 @@ fieldset {
   }
 
   .hero-actions {
-    flex-direction: column;
-  }
-
-  .service-head {
     flex-direction: column;
   }
 
