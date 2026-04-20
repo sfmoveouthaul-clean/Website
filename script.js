@@ -57,7 +57,7 @@ if (quoteForm && feedback) {
     const description = (formData.get("description") || "").toString().trim();
 
     const message = encodeURIComponent(
-      "New quote request for SF Move-Out Clean + Haul\n\n" +
+      "New quote request for SF Move-Out Cleaning Co\n\n" +
       `Name: ${name}\n` +
       `Neighborhood: ${neighborhood}\n` +
       `Phone: ${number}\n` +
